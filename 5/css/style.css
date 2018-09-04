@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "Gilroy ExtraBold";
+	src: url(../fonts/gilroyextrabold.woff) format("woff"),
+		 url(../fonts/gilroyextrabold.woff2) format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy Light";
+	src: url(../fonts/gilroylight.woff) format("woff"),
+		 url(../fonts/gilroylight.woff2) format("woff2");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "OpenSans";
+	src: url(../fonts/opensans.woff) format("woff"),
+		 url(../fonts/opensans.woff2) format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "OpenSans Light";
+	src: url(../fonts/opensanslight.woff) format("woff"),
+		 url(../fonts/opensanslight.woff2) format("woff2");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+/* CSS Document */
+
+html { 
+	box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+	box-sizing: inherit; 
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 0;
+	line-height: 1;
+	font-family: "OpenSans Light", sans-serif;
+}
+
+h1, h2 {
+	font-size: 47px;
+	font-family: "Gilroy ExtraBold", sans-serif;
+	color: #000000;
+}
+
+body > input[type="radio"] {
+	display: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* header */
+
+.header {
+	position: relative;
+	width: 1160px;
+	margin: 40px auto 0 auto;
+	background-color: #ffe294;
+	color: #000000;
+}
+
+.header__logo {
+	position: absolute;
+	top: -24px;
+	left: 57px;
+	font-size: 48px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	font-family: "Gilroy ExtraBold", sans-serif;
+	text-decoration: none;
+	color: #000000;
+}
+
+.header__logo:hover {
+	color: #444444;
+}
+
+.header__logo:active {
+	color: #666666;
+}
+
+.header__content {
+	width: 1040px;
+	padding: 34px 60px;
+}
+
+.header__form {
+	width: 450px;
+	display: flex;
+	margin: auto 0;
+}
+
+.header__form-input {
+	border: 0;
+	width: 355px;
+	height: 45px;
+	background-color: transparent;
+	color: #000000;
+	padding-left: 40px;
+	opacity: 0.3;
+	font-family: "OpenSans Light", sans-serif;
+	font-size: 15px;
+}
+
+.header__form::before {
+	content: "";
+	position: absolute;
+	top: 50px;
+	left: 65px;
+	width: 16px;
+	height: 16px;
+	background: url(../img/search.svg);
+}
+
+.header__form-button {
+	display: none;
+	width: 85px;
+	height: 45px;
+	border: 2px solid #000000;
+	background-color: transparent;
+	font-family: "OpenSans Light", sans-serif;
+	font-size: 15px;
+}
+
+.header__form-input:hover {
+	opacity: 0.6;
+}
+
+.header__form-input:focus {
+	border-bottom: 2px solid #000000;
+	opacity: 1;
+	outline: 1px transparent;
+}
+
+.header__form-input:focus + .header__form-button {
+	display: block;
+}
+
+.header__form-button:hover {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.header__form-button:active {
+	background-color: #000000;
+	color: #FFFFFF;
+	opacity: 0.3;
+}
+
+.header__user-area {
+	display: flex;
+	align-items: center;
+}
+
+/* main */
+
+
+
+/* footer */
+
+
+
