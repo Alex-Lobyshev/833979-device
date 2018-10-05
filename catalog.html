@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>HTML Academy: Девайс - каталог</title>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<meta name="format-detection" content="telephone=no">
+		<title>Device | Каталог</title>
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body>
 		<header class="header">
 			<a href="index.html" class="header__logo">Device</a>
 			<div class="header__content">
-				<form action="#" method="POST" autocomplete="on" class="header__block header__form">
-					<input type="text" placeholder="Поиск по сайту" class="header__form-input">
+				<form action="#" method="POST" autocomplete="on" class="header__form">
+					<input type="search" placeholder="Поиск по сайту" class="header__form-input">
 					<button type="submit" class="header__form-button">Найти</button>
 				</form>
 
 				<div class="header__block header__user-area">
 					
 					<div class="header__user-area-block">
-						<a href="#" class="header__user-area-link header__user-area-link--login">Иван Сабиров</a>
+						<a href="#" class="header__user-area-link header__user-area-link--login">Валентин Петухов</a>
 						<a href="#" class="header__user-area-link header__user-area-link--exit">Выйти</a>
 					</div>
 					<div class="header__user-area-block">
@@ -65,9 +66,9 @@
 			<section class="main__header">
 				<h1 class="main__header-title">Моноподы для селфи</h1>
 				<ul class="main__header-breadcrumbs">
-					<li><a href="#" class="main__header-breadcrums-link main__catalog-header-breadcrums-link-current">Главная</a></li>
-					<li><a href="#" class="main__header-breadcrums-link">Каталог товаров</a></li>
-					<li><a href="#" class="main__header-breadcrums-link">Моноподы для селфи</a></li>
+					<li><a href="#" class="main__header-breadcrumbs-link main__header-breadcrums-link--main">Главная</a></li>
+					<li><a href="#" class="main__header-breadcrumbs-link main__header-breadcrums-link--catalog">Каталог товаров</a></li>
+					<li><a href="#" class="main__header-breadcrumbs-link main__header-breadcrums-link--monopods">Моноподы для селфи</a></li>
 				</ul>
 			</section>
 			
@@ -84,9 +85,15 @@
 					<div class="main__wrapper-content-sorting">
 						<h3 class="main__wrapper-content-sorting-title">Сортировка:</h3>
 						<ul class="main__wrapper-content-sorting-list">
-							<li class="main__wrapper-content-sorting-list-item main__wrapper-content-sorting-list-item-current">По цене</li>
-							<li class="main__wrapper-content-sorting-list-item">По типу</li>
-							<li class="main__wrapper-content-sorting-list-item">По популярности</li>
+							<li class="main__wrapper-content-sorting-list-item main__wrapper-content-sorting-list-item-current">
+								<a href="#" class="main__wrapper-content-sorting-list-item-link main__wrapper-content-sorting-list-item-link-current">По цене</a>
+							</li>
+							<li class="main__wrapper-content-sorting-list-item">
+								<a href="#" class="main__wrapper-content-sorting-list-item-link">По типу</a>
+							</li>
+							<li class="main__wrapper-content-sorting-list-item">
+								<a href="#" class="main__wrapper-content-sorting-list-item-link">По популярности</a>
+							</li>
 						</ul>
 					</div>
 					
@@ -101,10 +108,11 @@
 			<!-- фильтр и каталог товаров -->
 			<div class="main__catalog">
 				<div class="main__catalog-product">
-					<aside class="main__catalog-product-filters">
+					<form action="#" method="POST" class="main__catalog-product-filters">
 						
 						<div class="main__catalog-product-filter-cost">
-							<h3 class="main__catalog-product-filter-cost-title">Цена</h3>
+							<div class="main__catalog-product-black-line main__catalog-product-black-line-cost"></div>
+							<h3 class="main__catalog-product-filter-cost-title">Стоимость</h3>
 							
 							<div class="main__catalog-filter-cost-buttons">
 								
@@ -120,6 +128,7 @@
 						</div>
 						
 						<div class="main__catalog-product-filter-color">
+							<div class="main__catalog-product-black-line main__catalog-product-black-line-color"></div>
 							<h3 class="main__catalog-product-filter-color-title">Цвет</h3>
 
 							<input type="checkbox" id="black" class="main__catalog-product-filter-color-checkbox" checked>
@@ -138,17 +147,20 @@
 							<label for="pink" class="main__catalog-product-filter-color-label">Розовый</label>
 						</div>
 						<div class="main__catalog-filter-bluetooth">
-							<h3 class="main__catalog-filter-bluetooth-title">Blutooth</h3>
+							<div class="main__catalog-product-black-line main__catalog-product-black-line-bluetooth"></div>
+							<h3 class="main__catalog-product-filter-bluetooth-title">Bluetooth</h3>
 							<input type="radio" name="blutooth-radio" id="yes" class="main__catalog-filter-bluetooth-radio" checked>
 							<label for="yes" class="main__catalog-filter-bluetooth-label">Есть</label>
 							<input type="radio" name="blutooth-radio" id="no" class="main__catalog-filter-bluetooth-radio">
 							<label for="no" class="main__catalog-filter-bluetooth-label">Нет</label>
 						</div>
 						<a href="#" class="main__catalog-product-filters-button page-button">Показать</a>
-					</aside>
+					</form>
 
 					<!-- перечень товаров -->
 					<section class="main__products-catalog">
+						
+						<h2 class="visually-hidden">Перечень товаров</h2>
 						
 						<div class="main__products-catalog-items">
 							
@@ -165,7 +177,9 @@
 								</div>
 								
 								<div class="main__product-catalog-item-description">
-									<span class="main__product-catalog-item-description-name">Любительская селфи-палка</span>
+									<a href="#" class="main__product-catalog-item-description-link">
+										<span class="main__product-catalog-item-description-name main__product-catalog-item-description-name-first">Любительская селфи-палка</span>
+									</a>
 									<span class="main__product-catalog-item-description-cost">500 руб.</span>
 								</div>
 								
@@ -184,8 +198,10 @@
 								</div>
 								
 								<div class="main__product-catalog-item-description">
-									<span class="main__product-catalog-item-description-name">Профессиональная селфи-палка</span>
-									<span class="main__product-catalog-item-description-cost">1500 руб.</span>
+									<a href="#" class="main__product-catalog-item-description-link">
+										<span class="main__product-catalog-item-description-name main__product-catalog-item-description-name-second">Профессиональная селфи-палка</span>
+									</a>
+									<span class="main__product-catalog-item-description-cost">1 500 руб.</span>
 								</div>
 							</div>
 							
@@ -202,8 +218,10 @@
 								</div>
 								
 								<div class="main__product-catalog-item-description">
-									<span class="main__product-catalog-item-description-name">Непотопляемая селфи-палка</span>
-									<span class="main__product-catalog-item-description-cost">2500 руб.</span>
+									<a href="#" class="main__product-catalog-item-description-link">
+										<span class="main__product-catalog-item-description-name main__product-catalog-item-description-name-third">Непотопляемая селфи-палка</span>
+									</a>
+									<span class="main__product-catalog-item-description-cost">2 500 руб.</span>
 								</div>
 								
 							</div>
@@ -224,8 +242,10 @@
 								</div>
 								
 								<div class="main__product-catalog-item-description">
-									<span class="main__product-catalog-item-description-name">Селфи-палка «Следуй за мной»</span>
-									<span class="main__product-catalog-item-description-cost">9400 руб.</span>
+									<a href="#" class="main__product-catalog-item-description-link">
+										<span class="main__product-catalog-item-description-name main__product-catalog-item-description-name-fourth">Селфи-палка «Следуй за мной»</span>
+									</a>
+									<span class="main__product-catalog-item-description-cost">4 900 руб.</span>
 								</div>
 								
 							</div>
@@ -234,10 +254,10 @@
 							<a href="#" class="main__products-catalog-paginator-back">Назад</a>
 							<ul class="main__products-catalog-paginator-list">
 								<li><a href="#" class="main__products-catalog-paginator-page-one">1</a></li>
-								<li><a href="#" class="main__products-catalog-paginator-two">2</a></li>
-								<li><a href="#" class="main__products-catalog-paginator-three">3</a></li>
+								<li><a href="#" class="main__products-catalog-paginator-page-two">2</a></li>
+								<li><a href="#" class="main__products-catalog-paginator-page-three">3</a></li>
 							</ul>
-							<a href="#" class="main__products-catalog-paginator-four">Назад</a>
+							<a href="#" class="main__products-catalog-paginator-next">Вперёд</a>
 						</div>
 					</section>
 					
@@ -252,7 +272,7 @@
 				</div>
 				<div class="footer__user">
 					<div class="footer__user-block">
-						<a href="#" class="footer__user-link footer__user-link--login">Иван Сабиров</a>
+						<a href="#" class="footer__user-link footer__user-link--login">Валентин Петухов</a>
 						<a href="#" class="footer__user-link footer__user-link--exit">Выйти</a>
 					</div>
 					<div class="footer__user-block">
@@ -270,28 +290,15 @@
 				<div class="footer__yellow-block"></div>
 				<div class="footer__social-network">
 					<div class="footer__social-network-list">
-						<a href="#" class="footer__social-network-list-item-link">Facebook</a>
-						<a href="#" class="footer__social-network-list-item-link">Instagram</a>
-						<a href="#" class="footer__social-network-list-item-link">Twitter</a>
+						<a href="#" class="footer__social-network-list-item-link footer__social footer__social-network-list-item-link--facebook">Facebook</a>
+						<a href="#" class="footer__social-network-list-item-link footer__social-network-list-item-link--instagramm">Instagram</a>
+						<a href="#" class="footer__social-network-list-item-link footer__social-network-list-item-link--twitter">Twitter</a>
 					</div>
 				</div>
-				<a href="#" class="footer__social-network-link--htmlacademy">HTML Academy</a>
+				<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__social-network-link--htmlacademy">HTML Academy</a>
 			</div>
 		</footer>
+		
+		<script src="js/main.js"></script>
 	</body>
 </html>
-	
-<div class="modal-window-write">
-	<form action="#" method="post" autocomplete="on" class="modal-window-write-form">
-		<label for="name" class="modal-window-write-form-label">Ваше имя:</label>
-		<input type="text" name="name" id="name" placeholder="Имя Фамилия" class="modal-window-write-form-input">
-
-		<label for="email" class="modal-window-write-form-label">Ваш e-mail:</label>
-		<input type="email" name="email" id="email" placeholder="email@example.com" class="modal-window-write-form-input">
-
-		<label for="letter" class="modal-window-write-form-label">Текст письма:</label>
-		<textarea name="letter" id="letter" class="modal-window-write-form-textarea"></textarea>
-	</form>
-	
-	<span class="modal-window-map-close close">X</span>
-</div>
